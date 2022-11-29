@@ -1,18 +1,17 @@
-﻿// For more information see https://aka.ms/fsharp-console-apps
-// Repeats a phrase n times:
+﻿module Argu.Samples.LS.Main
 
+open System
+open Argu
 
-// Define a new function to print a name.
-let printGreeting name =
-    printfn $"Hello {name} from F#!"
+[<EntryPoint>]
+let main argv = 
+    let errorHandler = ProcessExiter(colorizer = function ErrorCode.HelpText -> None | _ -> Some ConsoleColor.Red)
+    let parser = ArgumentParser.Create<LsArguments>(programName = "ls", errorHandler = errorHandler)
 
-// Call the function.
-//printGreeting "World"
+    let results = parser.ParseCommandLine argv
 
-// Define a new function to print a name n times.
-let printGreetingNTimes name n =
-    for i in 1..n do
-        printGreeting name
+    printfn "Got parse results %A" <| results.GetAllResults()
+    let files = results.GetResult(Files, defaultValue = [])
+    printfn "Listing files %A" files
 
-// Call the function.
-printGreetingNTimes "World" 5
+    0
