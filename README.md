@@ -1,9 +1,14 @@
 
 # live-coding-csharp (Can use as a GitHub Codespaces Template for .NET 7 with F#)
 
+### Lesson 4:  Continue to explore the pig latin example
+
+Didn't fully grok yet, and need to explore and get interactive fsharp working!
+
 ### Lesson 3: Build a phrase repeater without library
 
 TO DO:  Look at the C# System.Command CLI library.  Does it work with F#?
+
 
 
 ### Lesson 2:  Checkout building the app into something that accepts arguments
