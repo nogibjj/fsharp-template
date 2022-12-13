@@ -59,7 +59,9 @@
 				"ms-dotnettools.csharp",
 				"dbaeumer.vscode-eslint",
 				"GitHub.copilot-labs",
-				"GitHub.copilot-nightly"
+				"GitHub.copilot-nightly",
+				"Ionide.Ionide-fsharp",
+				"andriniaina.fsharp-interactive-datascience"
 			]
 		}
 	}
